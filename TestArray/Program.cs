@@ -20,7 +20,8 @@ namespace TestArray
 
             array = array.OrderBy(x => x).ToArray();
 
-            array.Select((value, index) => $"{index}: {value}").ForEach(Console.WriteLine);
+            array.Select((value, index) => $"{index.ToString().PadLeft(2, ' ')}: {value}").ForEach(Console.WriteLine);
+            //array.Select((value, index) => $"{index, 2}: {value}").ForEach(Console.WriteLine); тоже что и сверху 
 
 
             Console.WriteLine(String.Join(", ", array));
